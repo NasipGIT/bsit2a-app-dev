@@ -29,7 +29,12 @@ const password = ref ("");
 function login(){
 
 // alert("Login function called");
-if (username.value === defaultUsername.value )
-if (username.value === defaultPassword.value )
+if (username.value === defaultUsername.value && password.value === defaultPassword.value )
+{
+  navigateTo ("/test");
+} else
+{
+  alert ("Invalid username or password");
+}
 }
 </script>
