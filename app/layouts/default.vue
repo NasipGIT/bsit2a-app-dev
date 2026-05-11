@@ -2,10 +2,7 @@
 <v-app>
     <v-navigation-drawer v-model="drawer"
         :rail="rail"
-        permanent
-        
-      
-      >
+        permanent>
         <template v-slot:prepend>
           <v-list-item
             lines="two"
@@ -18,16 +15,18 @@
         <v-divider></v-divider>
 
         <v-list density="compact" nav>
-          <v-list-item prepend-icon="mdi-home-city" title="Home" value="home"></v-list-item>
-          <v-list-item prepend-icon="mdi-account" title="My Account" value="account"></v-list-item>
-          <v-list-item prepend-icon="mdi-account-group-outline" title="Users" value="users"></v-list-item>
+          <v-list-item prepend-icon="mdi-home-city" title="Prelim" to="/Prelim" value="prelim"></v-list-item>
+          <v-list-item prepend-icon="mdi-account" title="Test" to="/test" value="test"></v-list-item>
+          <v-list-item prepend-icon="mdi-account-group-outline" title="Calculate" to="/calculate" value="calculate"></v-list-item>
+          <v-list-item prepend-icon="mdi-calculator" title="midterm_exam" to="/midterm_exam" value="midterm_exam"></v-list-item>
+          <v-list-item prepend-icon="mdi-note" title="todo" to="/todo" value="todo"></v-list-item>
+          
         </v-list>
       </v-navigation-drawer>
       <v-app-bar :elevation="2">
   <template v-slot:prepend>
     <v-app-bar-nav-icon @click="drawer = !drawer">
-    
-
+   
     </v-app-bar-nav-icon>
   </template>
 
